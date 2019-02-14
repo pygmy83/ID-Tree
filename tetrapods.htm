@@ -1,0 +1,89 @@
+ <!-- this is the main HTML view for the whole of OneZoom Tree if Life (multi-touch for kisok V2.0) -->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head> <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120374858-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120374858-1');
+</script>
+
+        
+        <!-- standard title and meta tags in the head-->
+        
+        <meta NAME="description" CONTENT="OneZoom Tree of Life Explorer" />
+        <meta NAME="viewport" CONTENT="width=device-width , initial-scale=1.0 , user-scalable=no"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title> OneZoom Tree of Life Explorer Kisok Display</title>
+        
+        <!-- style for the four main display elements -->
+        <!-- the image-rendering options are supposed to improve speed -->
+                
+        <style>
+    
+    #myCanvas
+    {
+        position:absolute;
+        top: 0px;
+        right: 0px;
+        width: 85%;
+        height: 100%;
+        image-rendering: optimizeSpeed;
+        image-rendering:-o-crisp-edges;
+        image-rendering:-webkit-optimize-contrast;
+        -ms-interpolation-mode: nearest-neighbor;
+    }
+        
+        #HeadCanvas
+        {
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            width: 15%;
+            height: 100%;
+            
+        }
+        
+        #Logo
+        {
+            position:absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 15%;
+        }
+
+
+        </style>
+    
+        <!-- only one script file, this calls others onload in differnet files init() is the first and only function to be called from html -->
+        
+        <script type="text/javascript" src="OZ_W_1/tetrapods_soption.js"></script>
+
+    </head>
+
+    <!-- main body of document - only four elements -->
+
+    <body id = "wholebody" onLoad="init();" onresize="Resize();" style="overflow: hidden ; background-color:  rgb(220,230,255) ; user-select:none -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select:none; -ms-user-select:none;" unselectable = "on">
+	
+        <!-- main body of document - only four elements -->
+        <canvas id="myCanvas" >
+        </canvas>
+    
+        <!-- hard coded information bar now on the left (variable size) -->
+        <canvas id="HeadCanvas">
+        </canvas>
+		
+        <!-- OneZoom logo on a canvas, always on bottom right -->
+        <canvas id="Logo">
+        </canvas>
+            
+    </body>
+    
+</html>

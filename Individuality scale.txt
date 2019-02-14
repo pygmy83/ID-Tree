@@ -1,0 +1,33 @@
+HSest min = 0.13 Monachus_schauinslandi
+HSest max = 11.69 Strix_aluco, Certhia_brachydactyla
+
+HSest values within 0-12 and 5 levels
+
+0   - 2.5 	very low (LC)
+2.5 - 5		low (NT)
+5   - 7.5	moderate (VU)
+7.5 - 10	high (EN)
+10  - 12.5	very high (CR)
+
+
+
+        case "CR":
+			/* PL_edit 
+			return ("Critically Endangered"); */
+      return ("Very high");
+        case "EN":
+			/* PL_edit
+			return ("Endangered"); */
+			return ("High");
+        case "VU":
+			/* PL_edit
+			return ("Vulnerable"); */
+			return ("Moderate");
+        case "NT":
+			/* PL_edit
+			return ("Near Threatened"); */
+			return ("Low");
+        case "LC":
+			/* PL_edit
+			return ("Least Concern"); */
+			return ("Very low");
